@@ -36,7 +36,7 @@ if($_SESSION['username']=="" || $_SESSION['userType']!="Client") {
     				<div class="modal-content">
       					<div class="modal-header">
         					<h3 class="modal-title" id="exampleModalLabel">Profile</h3>
-        					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        					<button type="button" class="btn-close" onclick="f()" data-bs-dismiss="modal" aria-label="Close"></button>
       					</div>
       					
       					<div class="modal-body">
@@ -75,7 +75,7 @@ if($_SESSION['username']=="" || $_SESSION['userType']!="Client") {
       					
       					<div class="modal-footer">
       						<button type="button" id="acceptJob" class="btn btn-success">Hire Worker</button>
-        					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        					<button type="button" class="btn btn-secondary" onclick="f()" data-bs-dismiss="modal">Close</button>
       					</div>
     				</div>
   				</div>
@@ -227,6 +227,12 @@ if($_SESSION['username']=="" || $_SESSION['userType']!="Client") {
 			'class' : 'active'
 		})
   	});
+	  
+	  
+	function f(){
+		document.location.reload()
+	}
+	
 
 	function logout() {
 		Swal.fire({
