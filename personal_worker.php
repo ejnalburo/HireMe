@@ -139,7 +139,7 @@ if($_SESSION['username']=="" || $_SESSION['userType']!="Client") {
 			<?php
 				include 'config.php';
 
-				$sql = "SELECT a.workerID as jobworkerID, a.userID as workerID, a.categoryID as categoryID, a.jobTitle as jobTitle, a.rate as rate, a.workExperience as workExperience, a.location as location, b.userID as userID, b.profile as profile, b.firstname as firstname, b.lastname as lastname FROM workers a, users b WHERE categoryID = '5' AND a.userID = b.userID ORDER BY dateCreated desc";
+				$sql = "SELECT a.workerID as jobworkerID, a.userID as workerID, a.categoryID as categoryID, a.jobTitle as jobTitle, a.rate as rate, a.workExperience as workExperience, b.lat as lat, b.lng as lng, b.userID as userID, b.profile as profile, b.firstname as firstname, b.lastname as lastname FROM workers a, users b WHERE categoryID = '5' AND a.userID = b.userID ORDER BY dateCreated desc";
                     
                 $query =  mysqli_query($conn, $sql);
                 $rows = mysqli_num_rows($query);

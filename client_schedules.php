@@ -119,7 +119,7 @@ if($_SESSION['username']=="" || $_SESSION['userType']!="Client") {
 									<thead>
 										<tr>
 											<td>Date</td>
-											<td>Events</td>
+											<td>Job Desc.</td>
 											<td>Worker</td>
 											<td>Actions</td>
 										</tr>
